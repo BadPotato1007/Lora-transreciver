@@ -2,7 +2,6 @@
 #include <Wire.h>
 #include <SPI.h>
 #include <LoRa_E32.h>
-#include <SoftwareSerial.h>
 
 // Pin definitions
 #define LORA_RX_PIN 0       // RX pin for LoRa
@@ -19,8 +18,7 @@
 PDLS_EXT3_Basic_Global display;
 
 // LoRa setup
-SoftwareSerial LoRaSerial(LORA_RX_PIN, LORA_TX_PIN);  // Software serial for LoRa
-LoRa_E32 e32(&LoRaSerial, AUX_PIN, M0_PIN, M1_PIN);   // LoRa module setup
+LoRa_E32 e32(&Serial1, AUX_PIN, M0_PIN, M1_PIN);   // LoRa module setup using Serial1
 
 // Variables to hold joystick values
 int joystickX = 0;
@@ -30,6 +28,9 @@ int buttonState = 0;
 void setup() {
   // Start the built-in serial monitor for debugging
   Serial.begin(9600);
+
+  // Initialize the hardware serial (Serial1) for LoRa communication
+  Serial1.begin(9600);
 
   // Initialize the e-ink display
   display.begin();
