@@ -1,4 +1,4 @@
-#include <PDLS_EXT3_BASIC_RELEASE.h>
+#include <PDLS_EXT3_Basic_Global.h>
 #include <Wire.h>
 #include <SPI.h>
 #include <LoRa_E32.h>
@@ -16,7 +16,7 @@
 #define BUTTON_PIN 7        // Button or switch pin
 
 // E-ink display setup
-PDLS_EXT3_BASIC_RELEASE display;
+PDLS_EXT3_Basic_Global display;
 
 // LoRa setup
 SoftwareSerial LoRaSerial(LORA_RX_PIN, LORA_TX_PIN);  // Software serial for LoRa
