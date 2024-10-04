@@ -15,8 +15,7 @@
 #define BUTTON_PIN 7        // Button or switch pin
 
 // E-ink display setup
-PDLS_EXT3_Basic_Global display;
-
+Screen_EPD_EXT3 display(eScreen_EPD_266_CS_0C, boardRaspberryPiPico_RP2040);
 // LoRa setup
 LoRa_E32 e32(&Serial1, AUX_PIN, M0_PIN, M1_PIN);   // LoRa module setup using Serial1
 
