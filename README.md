@@ -1,5 +1,5 @@
 # Lora Transreciver
-## ⚠️This Repositry is under heavy development, and there may be breaking changes. I assume no responsibility for the loss of anything you own.
+## ⚠️This Repositry is no longer maintained, and there may be breaking changes. I assume no responsibility for the loss of anything you own.
 
 
 Transmitter Side
